@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import SearchBar from './components/SearchBar';
 import ImageCard from './components/ImageCard';
-import './css/style.css'; // Vous pouvez retirer cette ligne si elle n'est pas nécessaire
+import './css/style.css';
 
 const App = () => {
   const [images, setImages] = useState([]);
@@ -21,8 +21,10 @@ const App = () => {
 
   return (
     <div className="container mx-auto mt-8">
-      <h1 className="text-4xl font-bold mb-4">Moteur de recherche d'images</h1>
-      <div className="flex justify-center"> {/* Utilisez flex et justify-center pour centrer la barre de recherche */}
+      <div className="text-center">
+        <h1 className="text-4xl font-bold mb-4">Moteur de recherche d'images</h1>
+      </div>
+      <div className="flex justify-center"> 
         <SearchBar onSearch={handleSearch} />
       </div>
       <div className="grid grid-cols-3 gap-4 mt-4">
